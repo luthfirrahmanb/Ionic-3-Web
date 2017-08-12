@@ -1,0 +1,132 @@
+page-about {
+
+    .menu{
+        left: 0;
+    }
+
+    .shadow{
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .footer{
+        position: fixed;
+        height: 30px;
+        background-color: #0066ff;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+        margin-bottom: 0px;
+    }
+
+    .img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-image: url("../../assets/images/pp.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 100% 30%;
+    }
+
+    @keyframes slideInBothWays {
+    0% {
+        -webkit-transform: translate3d(-100%,0,0);
+    }
+    
+    50% {
+        -webkit-transform: translate3d(50%,0,0);
+    }
+    
+    100% {
+        -webkit-transform: translate3d(0,0,0);
+    }
+
+    
+    }
+    @keyframes animateInPrimary {
+    0% {
+        -webkit-transform: translate3d(-100%,0,0);
+    }
+    
+    100% {
+        -webkit-transform: translate3d(0,0,0);
+    }
+    }
+    
+    @keyframes animateInSecondary{
+    
+    0% {
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
+    }
+    
+    .animate-in-primary {
+        -webkit-animation: animateInPrimary;
+        animation: animateInPrimary;
+        -webkit-animation-duration: 750ms;
+        animation-duration: 750ms;
+    }
+    
+    .animate-in-secondary {
+        -webkit-animation: animateInSecondary ease-in 1;
+        animation: animateInSecondary ease-in 1;
+        -webkit-animation-duration: 750ms;
+        animation-duration: 750ms;
+    }
+    .slide-in-both-ways {
+        -webkit-animation: slideInBothWays ease-in 1; 
+        animation: slideInBothWays ease-in 1;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-duration: 1000ms;
+        animation-duration: 1000ms;
+    }
+
+    @keyframes slideInSmooth {
+    0% {
+        -webkit-transform: translate3d(-100%,0,0);
+    }
+    
+    50% {
+        -webkit-transform: translate3d(50%,0,0);
+    }
+    
+    100% {
+        -webkit-transform: translate3d(0,0,0);
+    }
+    }
+
+    .slide-in{
+        -webkit-animation: slideInSmooth ease-in 1; 
+        animation: slideInSmooth ease-in 1;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-duration: 200ms;
+        animation-duration: 2000ms;
+    }
+
+    @keyframes listGrow {
+    0% {
+        -webkit-transform: scale3d(1, 0, 1);
+    }
+    
+    100% {
+        -webkit-transform: scale3d(1, 1, 0);
+    }
+    }
+    
+    .list-grow-animation {
+        -webkit-animation: listGrow ease-in 1; 
+        animation: listGrow ease-in 1;
+        -webkit-animation-duration: 400ms;
+        animation-duration: 400ms;
+    }
+}

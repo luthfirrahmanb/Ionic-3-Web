@@ -1,0 +1,107 @@
+<!--
+  Generated template for the HomePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="headbar">
+    <ion-buttons class="menu">
+      <button ion-button (click)="toHome()">Home</button>
+      <button ion-button (click)="toAbout()">About Me</button>
+      <button ion-button (click)="toSkill()">Skills</button>
+    </ion-buttons>
+
+    <ion-buttons end>
+      <a href="https://github.com/luthfirrahmanb/" target="_blank"><button ion-button icon-only><ion-icon name="logo-github" style="font-size:2.3em"></ion-icon></button></a>
+      <a href="https://www.linkedin.com/in/luthfir-rahman-bagaskara-681026110/" target="_blank"><button ion-button icon-only><ion-icon name="logo-linkedin" style="font-size:2.3em"></ion-icon></button></a>
+    </ion-buttons>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top class="shadow">
+    <ion-segment [(ngModel)]="aboutMe" color="headbar" text-wrap>
+      <ion-segment-button value="stories">
+        Story
+      </ion-segment-button>
+      <ion-segment-button value="schools">
+        School
+      </ion-segment-button>
+      <ion-segment-button value="works">
+        Experience
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content padding style="background-color:#4d4d4d;color:white;">
+
+  <div [ngSwitch]="aboutMe">
+    <ion-list *ngSwitchCase="'stories'">
+      <ion-card>
+        <ion-card-header [@flyInBottomFast]="section1">
+          <div class="img">
+            <h2 style="margin-left:105px;">Luthfir Rahman</h2>
+            <h1 style="margin-left:105px;margin-top:10px;">Bagaskara</h1>
+            <p style="margin-left:105px; margin-top:10px;">December 4, 1996</p>
+          </div>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-card-title [@flyInBottomFast]="section1">
+            The...Stories...
+          </ion-card-title>
+          <p [@flyInBottomFast]="section1">
+            Once upon a time, a baby born to this cruel world and and god give the baby the<i> force</i> within him, and
+            that baby is <b>Me</b>. Yeah God give me the
+            <i>Force</i> to conquer this world. <br><br>
+          </p>
+          <p [@flyInBottomSlow]="section2">
+            Enough with the chit-chat and Hi Nice to meet you guys, welcome to my website, and you must be wonder "Are you the member of <b>Katon Bagaskara's</b> family?", okay calm guys i know you have many questions in
+            your head about my <b>last name</b>, okay let me introduce myself, my name is Luthfir Rahman Bagaskara you can
+            call me Luthfir or Luthfi, i'm the second child of two siblings and i'm <b>not</b> katon bagaskara's family,
+            and i get this last name from my Lovely <a href="https://www.linkedin.com/in/dimas-satrya-35993730/" target="_blank">brother</a>.<br><br>            And i'm graduated from Telkom Vocational School majoring <b>Transmission Telecommunication</b>, and now i'm continuing
+            my study on Mercu Buana University majoring Informatics Engineering. And you must be wonder (again) "you graduated
+            from Telecommunication but why now you are a programmer?", Okay guys i have a long story behind it that i can't
+            explain to you guys, the point is i'd inspired by Hacker Film.<br><br> And that's all the story i can tell to
+            you guys, and Thank you to spend your precious time for visiting my web :)
+          </p>
+        </ion-card-content>
+      </ion-card>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'schools'">
+      <div>
+        <ion-list>
+          <ion-item *ngFor="let s of school" class="item-remove-animate item-avatar item-icon-right list-grow-animation" text-wrap>
+            <ion-avatar item-left>
+              <img src="{{s.photo}}">
+            </ion-avatar>
+            <h2 class="animate-in-primary">{{s.name}}</h2>
+            <h3 class="animate-in-secondary">{{s.year}}</h3>
+            <p class="slide-in">{{s.place}}</p>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'works'">
+      <div>
+        <ion-list>
+          <ion-item *ngFor=" let w of work " (click)="selWorkExperience(w)" text-wrap>
+            <ion-avatar item-left>
+              <img src="{{w.photo}}">
+            </ion-avatar>
+            <h2>{{w.name}}</h2>
+            <p>As {{w.as}}</p>
+            <ion-icon name="md-arrow-dropright" item-right></ion-icon>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-list>
+  </div>
+
+  <div class="footer">
+    <p align="center" style="font-size:10px;">Luthfir Rahman Bagaskara &copy; 2017
+  </div>
+</ion-content>
