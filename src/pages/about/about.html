@@ -8,14 +8,15 @@
 
   <ion-navbar color="headbar">
     <ion-buttons class="menu">
-      <button ion-button (click)="toHome()">Home</button>
-      <button ion-button (click)="toAbout()">About Me</button>
-      <button ion-button (click)="toSkill()">Skills</button>
+      <button tappable ion-button (click)="toHome()">Home</button>
+      <button tappable ion-button (click)="toAbout()">About Me</button>
+      <button tappable ion-button (click)="toSkill()">Skills</button>
     </ion-buttons>
 
-    <ion-buttons end>
-      <a href="https://github.com/luthfirrahmanb/" target="_blank"><button ion-button icon-only><ion-icon name="logo-github" style="font-size:2.3em"></ion-icon></button></a>
-      <a href="https://www.linkedin.com/in/luthfir-rahman-bagaskara-681026110/" target="_blank"><button ion-button icon-only><ion-icon name="logo-linkedin" style="font-size:2.3em"></ion-icon></button></a>
+   <ion-buttons end>
+      <a href="https://github.com/luthfirrahmanb/" target="_blank"><button ion-button icon-only><ion-icon name="logo-github" style="font-size:2em"></ion-icon></button></a>
+      <a href="https://www.linkedin.com/in/luthfir-rahman-bagaskara-681026110/" target="_blank"><button ion-button icon-only><ion-icon name="logo-linkedin" style="font-size:2em"></ion-icon></button></a>
+      <a href="https://www.facebook.com/luthfirrb" target="_blank"><button ion-button icon-only><ion-icon name="logo-facebook" style="font-size:2em"></ion-icon></button></a>
     </ion-buttons>
   </ion-navbar>
 
@@ -57,10 +58,11 @@
             <i>Force</i> to conquer this world. <br><br>
           </p>
           <p [@flyInBottomSlow]="section2">
-            Enough with the chit-chat and Hi Nice to meet you guys, welcome to my website, and you must be wonder "Are you the member of <b>Katon Bagaskara's</b> family?", okay calm guys i know you have many questions in
-            your head about my <b>last name</b>, okay let me introduce myself, my name is Luthfir Rahman Bagaskara you can
-            call me Luthfir or Luthfi, i'm the second child of two siblings and i'm <b>not</b> katon bagaskara's family,
-            and i get this last name from my Lovely <a href="https://www.linkedin.com/in/dimas-satrya-35993730/" target="_blank">brother</a>.<br><br>            And i'm graduated from Telkom Vocational School majoring <b>Transmission Telecommunication</b>, and now i'm continuing
+            Enough with the chit-chat and Hi Nice to meet you guys, welcome to my website, and you must be wonder "Are you the member
+            of <b>Katon Bagaskara's</b> family?", okay calm guys i know you have many questions in your head
+            about my <b>last name</b>, okay let me introduce myself, my name is Luthfir Rahman Bagaskara you can call me
+            Luthfir or Luthfi, i'm the second child of two siblings and i'm <b>not</b> katon bagaskara's family, and i get
+            this last name from my Lovely <a href="https://www.linkedin.com/in/dimas-satrya-35993730/" target="_blank">brother</a>.<br><br>            And i'm graduated from Telkom Vocational School majoring <b>Transmission Telecommunication</b>, and now i'm continuing
             my study on Mercu Buana University majoring Informatics Engineering. And you must be wonder (again) "you graduated
             from Telecommunication but why now you are a programmer?", Okay guys i have a long story behind it that i can't
             explain to you guys, the point is i'd inspired by Hacker Film.<br><br> And that's all the story i can tell to
@@ -88,7 +90,7 @@
     <ion-list *ngSwitchCase="'works'">
       <div>
         <ion-list>
-          <ion-item *ngFor=" let w of work " (click)="selWorkExperience(w)" text-wrap>
+          <ion-item tappable *ngFor=" let w of work " (click)="selWorkExperience(w)" text-wrap>
             <ion-avatar item-left>
               <img src="{{w.photo}}">
             </ion-avatar>
