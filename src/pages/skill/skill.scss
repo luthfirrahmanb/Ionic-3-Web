@@ -17,4 +17,13 @@ page-skill {
         right: 0px;
         margin-bottom: 0px;
     }
+    
+
+    @media screen and (min-width: 768px) {
+
+        canvas{
+            width:750px !important;
+            height:350px !important;
+        }
+    }
 }
